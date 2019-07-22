@@ -9,9 +9,9 @@
   <button class="btn btn-export" (click)="export()"><i class="fas fa-file-export"></i> {{ 'export' | translate }}</button>
   
   <!-- session buttons -->
-  <button class="btn btn-session btn-signIn" *ngIf="!sessionService.token" (click)="signIn()"><i class="far fa-user-circle"></i> Sign in</button>
+  <button class="btn btn-session btn-signIn" *ngIf="!sessionService.token" (click)="signIn()"><i class="far fa-user-circle"></i> {{ 'signIn' | translate }}</button>
 
-  <button class="btn btn-session btn-signOut" *ngIf="sessionService.token" (click)="sessionService.signOut()"><i class="far fa-times-circle"></i> Sign out</button>
+  <button class="btn btn-session btn-signOut" *ngIf="sessionService.token" (click)="sessionService.signOut()"><i class="far fa-times-circle"></i> {{ 'signOut' | translate }}</button>
   <button class="btn btn-session btn-profile" *ngIf="sessionService.token" (click)="sessionService.userProfile()"><i class="fas fa-user-circle"></i> {{ sessionService.username ? sessionService.username : sessionService.email }}</button>
 
 </div>

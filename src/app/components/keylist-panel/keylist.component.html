@@ -1,8 +1,22 @@
 <div class="panel keylist">
-  <div class="title"><i class="fas fa-th-list"></i> {{ 'translation' | translate }}</div>
-  <button class="btn add"><i class="fas fa-plus-circle"></i> Add</button>
-  <button class="btn remove"><i class="fas fa-minus-circle"></i> Remove</button>
-  <select size="{{ i18nService.keyList.length + 2 }}" *ngIf="i18nService.keyList.length" [(ngModel)]="i18nService.currentKey">
+  <div class="title"><i class="fas fa-th-list"></i> {{ 'translateKeys' | translate }}</div>
+  <button class="btn add" (click)="addKeyPopup=true"><i class="fas fa-plus-circle"></i> {{ 'add' | translate }}</button>
+  <button class="btn remove" (click)="removeKey()"><i class="fas fa-minus-circle"></i> {{ 'remove' | translate }}</button>
+  <select size="{{ i18nService.keyList.length+1 }}" *ngIf="i18nService.keyList.length" [(ngModel)]="i18nService.currentKey">
     <option *ngFor="let key of i18nService.keyList">{{ key }}</option>
   </select>
 </div>
+
+
+
+<div class="popup-container"  *ngIf="addKeyPopup">
+    <div class="popup addKey">
+      <p>{{ 'whatKeyToAdd' | translate }}</p>
+      <input type="text" [(ngModel)]="newKey">
+      <div class="buttonRow">
+        <button class="btn" [disabled]="!newKey" (click)="addKey()">{{ 'addKey' | translate }}</button>
+        <button class="btn" (click)="dismissPopup()">{{ 'cancel' | translate }}</button>
+      </div>
+    </div>
+  </div>
+  

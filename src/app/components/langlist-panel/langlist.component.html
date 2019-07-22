@@ -1,8 +1,23 @@
 <div class="panel langlist">
   <div class="title"><i class="fas fa-globe"></i> {{ 'languages' | translate }}</div>
-  <button class="btn add"><i class="fas fa-plus-circle"></i></button>
-  <button class="btn remove"><i class="fas fa-minus-circle"></i></button>
-  <select size="{{ i18nService.langList.length + 2 }}" *ngIf="i18nService.langList.length" multiple [(ngModel)]="i18nService.selectedLang">
-    <option *ngFor="let lang of i18nService.langList">{{ lang }}</option>
+  <button class="btn add" (click)="addLangPopup=true"><i class="fas fa-plus-circle"></i></button>
+  <button class="btn remove" (click)="removeLanguage()"><i class="fas fa-minus-circle"></i></button>
+  <select size="{{ i18nService.langList.length+1 }}" *ngIf="i18nService.langList.length" multiple [(ngModel)]="i18nService.selectedLang">
+    <option *ngFor="let lang of i18nService.langList" [value]="lang">{{ lang }}</option>
   </select>
+</div>
+
+
+<div class="popup-container"  *ngIf="addLangPopup">
+  <div class="popup addLanguage">
+    <p>{{ 'whatLanguageToAdd' | translate }}</p>
+    <input type="text" list="languages" [(ngModel)]="newLang">
+    <datalist id="languages">
+      <option *ngFor="let lang of languageList">{{ lang }}</option>
+    </datalist>
+    <div class="buttonRow">
+      <button class="btn" [disabled]="!newLang" (click)="addLanguage()">{{ 'addLanguage' | translate }}</button>
+      <button class="btn" (click)="dismissPopup()">{{ 'cancel' | translate }}</button>
+    </div>
+  </div>
 </div>

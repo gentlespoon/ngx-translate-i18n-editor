@@ -20,6 +20,10 @@ import { KeylistComponent } from './components/keylist-panel/keylist.component';
 import { LanglistComponent } from './components/langlist-panel/langlist.component';
 import { SessionPanelComponent } from './components/session-panel/session-panel.component';
 import { EditorPanelComponent } from './components/editor-panel/editor-panel.component';
+import { GsapiService } from './services/gsapi.service';
+import { TranslationService } from './services/translation.service';
+import { SessionService } from './services/session.service';
+import { I18nService } from './services/i18n.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -47,7 +51,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [ElectronService],
+  providers: [ElectronService, GsapiService, TranslationService, SessionService, I18nService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

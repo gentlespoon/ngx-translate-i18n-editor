@@ -5,52 +5,75 @@ import { Injectable } from '@angular/core';
 })
 export class I18nService {
 
+  private DEV = false;
+
   constructor() {
-    setInterval(() => {
-      console.log(this.keyList, this.langList, this.selectedLang, this.currentKey);
-    }, 1000);
+
+
+    if (this.DEV) {
+      setInterval(() => {
+        console.log(this.i18nData, this.keyList, this.langList, this.selectedLang, this.currentKey);
+      }, 5000);
+
+      this.i18nData = {
+        'en-US': {
+          'asdfasdf': 'asdfasdfasdfasdfasdf',
+          'subobject.asdf': 'asdf',
+        },
+        'en-TT': {
+          'asdfasdf': 'asdfasdfasdfasdfasdf',
+          'subobject.asdf': 'asdf',
+        },
+        'en-GB': {
+          'asdfasdf': 'asdfasdfasdfasdfasdf',
+          'subobject.asdf': 'asdf',
+        },
+        'zh-CHS': {
+          'asdfasdf': '阿斯蒂芬阿斯顿发送到发斯蒂芬',
+          'subobject.asdf': '阿斯蒂芬',
+        },
+        'zh-CHT': {
+          'asdfasdf': '阿斯蒂芬阿斯顿发送到发斯蒂芬',
+          'subobject.asdf': '阿斯蒂芬',
+        }
+      };
+
+    }
+
+    
   }
 
 
-  public keyList = [];
-  public langList = [];
+  public keyList: string[] = [];
+  public langList: string[] = [];
 
-  public selectedLang = [];
-  public currentKey = '';
+  public selectedLang: string[] = [];
+  public currentKey: string = '';
 
-  public i18nData = {
-    'en-US': {
-      'asdfasdf': 'asdfasdfasdfasdfasdf',
-      'subobject': {
-        'asdf': 'asdf',
+  public i18nData: object = {};
+
+
+  initialize(): void {
+    this.keyList = [];
+    this.langList = [];
+    this.i18nData = {};
+    this.selectedLang = [];
+    this.currentKey = '';
+  }
+
+  loadProject(savedProject: string) {
+    try {
+      var parsedGsI18nData = JSON.parse(savedProject);
+      if (!parsedGsI18nData['GsI18n']) {
+        throw 'Not a valid Gs i18n project file';
       }
-    },
-    'en-TT': {
-      'asdfasdf': 'asdfasdfasdfasdfasdf',
-      'subobject': {
-        'asdf': 'asdf',
-      }
-    },
-    'en-GB': {
-      'asdfasdf': 'asdfasdfasdfasdfasdf',
-      'subobject': {
-        'asdf': 'asdf',
-      }
-    },
-    'zh-CHS': {
-      'asdfasdf': '阿斯蒂芬阿斯顿发送到发斯蒂芬',
-      'subobject': {
-        'asdf': '阿斯蒂芬',
-      }
-    },
-    'zh-CHT': {
-      'asdfasdf': '阿斯蒂芬阿斯顿发送到发斯蒂芬',
-      'subobject': {
-        'asdf': '阿斯蒂芬',
-      }
+      delete parsedGsI18nData['GsI18n'];
+      this.i18nData = { ... parsedGsI18nData };
+      this.buildList();
+    } catch (ex) {
+      return alert(ex);
     }
-  };
-
+  }
 
   buildList(): void {
     for (let lang of Object.keys(this.i18nData)) {
@@ -61,6 +84,7 @@ export class I18nService {
     }
     this.langList.sort();
     this.keyList.sort();
+    this.selectedLang = Array.from(this.langList);
   }
 
   buildKeyList(partialI18nData: object, prefix?: string): void {

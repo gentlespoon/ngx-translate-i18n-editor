@@ -6,6 +6,7 @@ import { ElectronService } from './electron.service';
 import * as path from 'path';
 import * as uuid from 'uuidv4';
 import { GsapiService } from './gsapi.service';
+import { TranslationService } from './translation.service';
 
 @Injectable({
   providedIn: 'root'

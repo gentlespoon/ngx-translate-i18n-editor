@@ -41,7 +41,7 @@ export class TranslationService {
 
   private getUserLanguageFromServer(): void {
     // first try to get from cloud
-    this.apiService.get('language', this.sessionService.token)
+    this.apiService.get('/20190605.account/language', this.sessionService.token)
     .subscribe(response => {
       if (response.success) {
         this.translateService.use(this._language);
@@ -98,7 +98,7 @@ export class TranslationService {
 
 
   private saveUserLanguageToServer(): void {
-    this.apiService.put('language', this.sessionService.token, {language: this._language})
+    this.apiService.put('/20190605.account/language', this.sessionService.token, {language: this._language})
     .subscribe(response => {
       if (response.success) {
       } else {
