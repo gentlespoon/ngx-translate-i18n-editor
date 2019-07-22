@@ -1,18 +1,18 @@
 {
-  "name": "angular-electron",
-  "version": "6.0.1",
-  "description": "Angular 8 with Electron (Typescript + SASS + Hot Reload)",
-  "homepage": "https://github.com/maximegris/angular-electron",
+  "name": "Gs-Ngx-Translate-i18n-Editor",
+  "version": "19.07.22",
+  "description": "An i18n editor for Ngx-translate",
+  "homepage": "https://github.com/gentlespoon/ngx-translate-i18n-editor",
   "author": {
-    "name": "Maxime GRIS",
-    "email": "maxime.gris@gmail.com"
+    "name": "GentleSpoon (Angda Song)",
+    "email": "github@gentlespoon.com"
   },
   "keywords": [
-    "angular",
-    "angular 8",
-    "electron",
-    "typescript",
-    "sass"
+    "Ngx-translate",
+    "i18n editor",
+    "localization",
+    "locale",
+    "language pack"
   ],
   "main": "main.js",
   "private": true,
