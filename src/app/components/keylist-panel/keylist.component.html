@@ -1,5 +1,5 @@
 <div class="panel keylist">
-  <div class="title"><i class="fas fa-th-list"></i> {{ 'translateKeys' | translate }}</div>
+  <div class="title"><i class="fas fa-th-list"></i> 2. {{ 'translateKeys' | translate }}</div>
   <button class="btn add" (click)="addKeyPopup=true"><i class="fas fa-plus-circle"></i> {{ 'add' | translate }}</button>
   <button class="btn remove" (click)="removeKey()"><i class="fas fa-minus-circle"></i> {{ 'remove' | translate }}</button>
   <select size="{{ i18nService.keyList.length+1 }}" *ngIf="i18nService.keyList.length" [(ngModel)]="i18nService.currentKey">

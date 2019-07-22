@@ -1,7 +1,7 @@
 {
   "newProject": "新增檔案",
   "openProject": "開啟檔案",
-  "saveProject": "存儲",
+  "saveProject": "存儲檔案",
   "import": "錄入",
   "export": "轉存",
   "add": "新增",
@@ -15,5 +15,17 @@
   "translateKeys": "譯文標籤",
   "signIn": "登入",
   "signOut": "登出",
-  "exportToDir": "轉存至檔案夾"
+  "exportToDir": "轉存至檔案夾",
+  "whatLanguageToAdd": "輸入或選擇一種語言",
+  "removeLanguageWarning": "你即將刪除語言，繼續？",
+  "removeLanguageWarning2": "已刪除的語言無法被恢復。你將要刪除以下語言：",
+  "removeKeyWarning": "你即將刪除一個翻譯標籤。繼續？",
+  "removeKeyWarning2": "已刪除的翻譯標籤無法被恢復。你將要刪除以下標籤：",
+  "notImplemented": "這項功能還沒有被研發。請以後再試。",
+  "cannotAddCategory": "不能添加無下屬標籤的分類。請使用 ”分類.子分類.標籤” 格式添加。",
+  "keyAlreadyExists": "已存在同名標籤。",
+  "keyCannotBeNumber": "標籤名不能是數字。",
+  "langNotInListConfirm": "這個語言無法識別。你想創建一個自定語言嗎？自定語言可能不被一些瀏覽器支援。",
+  "saveOnlyForRegisteredUser": "請登入以存儲你的檔案。",
+  "selectAtLeastOneLanguage": "請選擇至少一種語言轉存。"
 }

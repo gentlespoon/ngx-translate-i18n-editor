@@ -1,4 +1,4 @@
-.btn-session {
+.btn.session {
   float: right;
 }
 
@@ -6,4 +6,18 @@
 .panel.session {
   height: 30px;
   border-bottom: 1px solid lightgray;
+}
+
+
+
+
+.btn.export {
+  color: darkgreen;
+}
+.btn.export:hover,
+.btn.export:focus {
+  background-color: #ccddcc;
+}
+.btn.export:active {
+  background-color: #aaddaa;
 }

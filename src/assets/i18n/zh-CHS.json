@@ -1,7 +1,7 @@
 {
   "newProject": "新建工程",
   "openProject": "打开项目",
-  "saveProject": "保存",
+  "saveProject": "保存项目",
   "import": "导入",
   "export": "导出",
   "add": "新建",
@@ -15,5 +15,17 @@
   "translateKeys": "译文标签",
   "signIn": "登录",
   "signOut": "退出",
-  "exportToDir": "导出到文件夹"
+  "exportToDir": "导出到文件夹",
+  "whatLanguageToAdd": "输入或选择一种语言",
+  "removeLanguageWarning": "你即将删除语言，继续？",
+  "removeLanguageWarning2": "已删除的语言无法被恢复。你将要删除以下语言：",
+  "removeKeyWarning": "你即将删除一个翻译标签。继续？",
+  "removeKeyWarning2": "已删除的翻译标签无法被恢复。你将要删除以下标签：",
+  "notImplemented": "这项功能还没有被开发。请以后再试。",
+  "cannotAddCategory": "不能添加无下属标签的分类。请使用 “分类.子分类.标签” 格式添加。",
+  "keyAlreadyExists": "已存在同名标签。",
+  "keyCannotBeNumber": "标签名不能是数字。",
+  "langNotInListConfirm": "这个语言无法识别。你想创建一个自定义语言吗？自定义语言可能不被一些浏览器支持。",
+  "saveOnlyForRegisteredUser": "请登录以保存你的项目。",
+  "selectAtLeastOneLanguage": "请选择至少一种语言导出。"
 }

@@ -79,13 +79,13 @@ export class KeylistComponent implements OnInit {
 
   removeKey(): void {
     if (confirm(this.translationService.instant('removeKeyWarning'))) {
-      if (confirm(this.translationService.instant('removeKeyWarning2') + '\n' + this.i18nService.currentKey)) {
+      // if (confirm(this.translationService.instant('removeKeyWarning2') + '\n' + this.i18nService.currentKey)) {
         this.i18nService.keyList.splice(this.i18nService.keyList.indexOf(this.i18nService.currentKey), 1);
         for (let lang of Object.keys(this.i18nService.i18nData)) {
           delete this.i18nService.i18nData[lang][this.i18nService.currentKey];
         }
         this.i18nService.currentKey = '';
-      }
+      // }
     }
   }
 

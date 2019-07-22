@@ -3,6 +3,7 @@
 
 .btn {
   width: 50%;
+  border-bottom: 1px solid lightgray;
 }
 
 
@@ -15,3 +16,26 @@
 }
 
 
+
+
+.btn.add {
+  color: darkgreen;
+}
+.btn.add:hover,
+.btn.add:focus {
+  background-color: #ccddcc;
+}
+.btn.add:active {
+  background-color: #aaddaa;
+}
+
+.btn.remove {
+  color: darkred;
+}
+.btn.remove:hover,
+.btn.remove:focus {
+  background-color: #ddcccc;
+}
+.btn.remove:active {
+  background-color: #ddaaaa;
+}

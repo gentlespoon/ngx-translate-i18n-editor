@@ -93,6 +93,10 @@ export class SessionPanelComponent implements OnInit {
 
 
 
+  public import(): void {
+    alert(this.translationService.instant('notImplemented'));
+  }
+
 
   public export(): void {
     if (this.i18nService.selectedLang.length) {

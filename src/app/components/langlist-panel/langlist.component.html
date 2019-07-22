@@ -1,5 +1,5 @@
 <div class="panel langlist">
-  <div class="title"><i class="fas fa-globe"></i> {{ 'languages' | translate }}</div>
+  <div class="title"><i class="fas fa-globe"></i> 1. {{ 'languages' | translate }}</div>
   <button class="btn add" (click)="addLangPopup=true"><i class="fas fa-plus-circle"></i></button>
   <button class="btn remove" (click)="removeLanguage()"><i class="fas fa-minus-circle"></i></button>
   <select size="{{ i18nService.langList.length+1 }}" *ngIf="i18nService.langList.length" multiple [(ngModel)]="i18nService.selectedLang">

@@ -15,5 +15,17 @@
   "translateKeys": "Translate Keys",
   "signIn": "Sign In",
   "signOut": "Sign out",
-  "exportToDir": "Export to directory"
+  "exportToDir": "Export to directory",
+  "whatLanguageToAdd": "Enter or select a language",
+  "removeLanguageWarning": "You are about to remove language from the language list. Continue?",
+  "removeLanguageWarning2": "Removed languages cannot be recovered. You are removing the following languages:",
+  "removeKeyWarning": "You are about to remove a translate key. Continue?",
+  "removeKeyWarning2": "Removed translate keys cannot be recovered. You are removing the following translate keys:",
+  "notImplemented": "This feature is not implemented. Check back later.",
+  "cannotAddCategory": "Cannot add a category with no child. Please add key using format \"category.subCategory.key\".",
+  "keyAlreadyExists": "A translate key with the same name already exists.",
+  "keyCannotBeNumber": "The name of a key cannot be a number.",
+  "langNotInListConfirm": "This language is not recognized. Do you want to create a custom language? Custom language may not be supported by some browsers.",
+  "saveOnlyForRegisteredUser": "Please sign in to save your project.",
+  "selectAtLeastOneLanguage": "Select at least one language for export."
 }
