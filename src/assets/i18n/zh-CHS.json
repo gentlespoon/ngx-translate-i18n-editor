@@ -1,0 +1,40 @@
+{
+	"accountNotFound": "此邮箱未注册帐号",
+	"accountRequired": "大多数Gs服务都需要Gs帐号",
+	"checkingToken": "正在检查重置口令",
+	"createAccount": "创建帐号",
+	"email": "电子邮箱",
+	"emailExists": "此邮箱已注册帐号",
+	"emailHint": "我不会散布您的电子邮箱",
+	"forgot": "忘记密码",
+	"gsServices": "Gs 服务",
+	"gsAccount": "Gs 帐号",
+	"help": "帮助",
+	"invalidCredentials": "无效的密码",
+	"invalidToken": "无效的重置口令",
+	"next": "继续",
+	"notYou": "不是您？",
+	"notYourDevice": "不是您的设备？",
+	"password": "密码",
+	"passwordHint": "您的密码将被加密储存",
+	"passwordNotMatch": "您的密码不匹配",
+	"privacy": "隐私",
+	"privateBrowsing": "用隐私浏览模式登录",
+	"resetPassword": "重设密码",
+	"sendFeedback": "反馈",
+	"signIn": "登录",
+	"signInInstead": "登录",
+	"signInToAccess": "登录以访问您的服务",
+	"signOut": "退出",
+	"signUp": "注册",
+	"signingIn": "正在登录",
+	"terms": "服务条款",
+	"verifyPassword": "验证密码",
+	"profile": {
+		"sidePanel": {
+			"home": "主要",
+			"info": "个人资料",
+			"security": "安全设置"
+		}
+	}
+}

@@ -1,0 +1,28 @@
+
+
+
+.sessionPanel {
+  position: fixed;
+  background-color: #eeeeee;
+  border-bottom: 1px solid #bbbbbb;
+  height: 30px;
+  position: fixed;
+  top: 0;
+  left: 200px;
+  width: calc(100% - 200px);
+  z-index: 5;
+}
+
+
+
+.mainPanel {
+  position: absolute;
+  top: 30px;
+  left: 400px;
+  
+  width: calc(100% - 400px);
+  height: calc(100vh - 30px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+//   position: relative;
+}

@@ -1,0 +1,16 @@
+<div class="editor-panel">
+  <div class="title"><i class="fas fa-edit"></i> {{ 'editor' | translate }}</div>
+  <div class="editor-main">
+    <div class="row">
+      <div class="language title">{{ 'languages' | translate }}</div>
+      <div class="translation title">{{ 'translation' | translate }}</div>
+    </div>
+
+    <div class="row" *ngFor="let lang of i18nService.selectedLang">
+      <div class="language">{{ lang }}</div>
+      <div class="translation">
+        <input type="text" [(ngModel)]="i18nService.i18nData[lang][i18nService.currentKey]">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+{
+	"accountNotFound": "此郵箱未註冊賬戶",
+	"accountRequired": "大多數Gs服務都需要Gs帳戶",
+	"checkingToken": "正在檢查重置口令",
+	"createAccount": "創建帳號",
+	"email": "電子郵箱",
+	"emailExists": "此郵箱已註冊賬戶",
+	"emailHint": "我不會散佈您的電子郵箱",
+	"forgot": "忘記密碼",
+	"gsServices": "Gs 服務",
+	"gsAccount": "Gs 賬戶",
+	"help": "幫助",
+	"invalidCredentials": "無效的密碼",
+	"invalidToken": "無效的重置口令",
+	"next": "继续",
+	"notYou": "不是您？",
+	"notYourDevice": "不是您的裝置？",
+	"password": "密碼",
+	"passwordHint": "您的密码将被加密儲存",
+	"passwordNotMatch": "您的密碼不匹配",
+	"privacy": "隱私",
+	"privateBrowsing": "用隱私瀏覽模式登入",
+	"resetPassword": "重設密碼",
+	"sendFeedback": "反饋",
+	"signIn": "登入",
+	"signInInstead": "登入",
+	"signInToAccess": "登入以訪問您的服務",
+	"signOut": "登出",
+	"signUp": "註冊",
+	"signingIn": "正在登入",
+	"terms": "服務條款",
+	"verifyPassword": "驗證密碼",
+	"profile": {
+		"sidePanel": {
+			"home": "主要",
+			"info": "個人檔案",
+			"security": "安保設置"
+		}
+	}
+}

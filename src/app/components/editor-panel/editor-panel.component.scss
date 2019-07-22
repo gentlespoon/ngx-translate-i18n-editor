@@ -1,0 +1,40 @@
+.editor-panel {
+  position: fixed;
+  top: 30px;
+  left: 350px;
+  bottom: 0;
+  width: calc(100% - 350px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+.row {
+  height: 30px;
+}
+
+.row > div {
+  position: absolute;
+  display: inline-block;
+  border-bottom: 1px solid lightgray;
+  height: 30px;
+}
+
+.row .language {
+  left: 0;
+  width: 100px;
+  border-right: 1px solid lightgray;
+  padding: 0 5px;
+  line-height: 30px;
+}
+.row .translation {
+  left: 100px;
+  width: calc(100% - 100px);
+}
+
+.row input[type="text"] {
+  height: 30px;
+  padding: 0 5px;
+  border: 1px solid lightgray;
+  width: 100%;
+}

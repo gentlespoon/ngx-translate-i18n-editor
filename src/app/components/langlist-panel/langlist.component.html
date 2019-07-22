@@ -1,0 +1,8 @@
+<div class="panel langlist">
+  <div class="title"><i class="fas fa-globe"></i> {{ 'languages' | translate }}</div>
+  <button class="btn add"><i class="fas fa-plus-circle"></i></button>
+  <button class="btn remove"><i class="fas fa-minus-circle"></i></button>
+  <select size="{{ i18nService.langList.length + 2 }}" *ngIf="i18nService.langList.length" multiple [(ngModel)]="i18nService.selectedLang">
+    <option *ngFor="let lang of i18nService.langList">{{ lang }}</option>
+  </select>
+</div>
