@@ -28,7 +28,13 @@
     "keyCannotBeNumber": "The name of a key cannot be a number.",
     "langNotInListConfirm": "This language is not recognized. Do you want to create a custom language? Custom language may not be supported by some browsers.",
     "saveOnlyForRegisteredUser": "Please sign in to save your project.",
-    "selectAtLeastOneLanguage": "Select at least one language for export."
+    "selectAtLeastOneLanguage": "Select at least one language for export.",
+    "addLanguage": "Add Language",
+    "stringWithCategoryNameExists": "This category name has been defined as a translate key.",
+    "categoryWithKeyNameExists": "This translate key has been defined as a category name.",
+    "languageAlreadyAdded": "This language is already in the list.",
+    "lossUnsavedWarning": "If you load another project, all unsaved changes will be lost.",
+    "invalidProjectFile": "Invalid i18n project file."
   },
   "en-GB": {
     "newProject": "New Project",
@@ -59,7 +65,13 @@
     "keyCannotBeNumber": "The name of a key cannot be a number.",
     "langNotInListConfirm": "This language is not recognized. Do you want to create a custom language? Custom language may not be supported by some browsers.",
     "saveOnlyForRegisteredUser": "Please sign in to save your project.",
-    "selectAtLeastOneLanguage": "Select at least one language for export."
+    "selectAtLeastOneLanguage": "Select at least one language for export.",
+    "addLanguage": "Add Language",
+    "stringWithCategoryNameExists": "This category name has been defined as a translate key.",
+    "categoryWithKeyNameExists": "This translate key has been defined as a category name.",
+    "languageAlreadyAdded": "This language is already in the list.",
+    "lossUnsavedWarning": "If you load another project, all unsaved changes will be lost.",
+    "invalidProjectFile": "Invalid i18n project file."
   },
   "en-TT": {
     "newProject": "New Project",
@@ -90,7 +102,13 @@
     "keyCannotBeNumber": "The name of a key cannot be a number.",
     "langNotInListConfirm": "This language is not recognized. Do you want to create a custom language? Custom language may not be supported by some browsers.",
     "saveOnlyForRegisteredUser": "Please sign in to save your project.",
-    "selectAtLeastOneLanguage": "Select at least one language for export."
+    "selectAtLeastOneLanguage": "Select at least one language for export.",
+    "addLanguage": "Add Language",
+    "stringWithCategoryNameExists": "This category name has been defined as a translate key.",
+    "categoryWithKeyNameExists": "This translate key has been defined as a category name.",
+    "languageAlreadyAdded": "This language is already in the list.",
+    "lossUnsavedWarning": "If you load another project, all unsaved changes will be lost.",
+    "invalidProjectFile": "Invalid i18n project file."
   },
   "zh-CHS": {
     "newProject": "新建工程",
@@ -121,7 +139,13 @@
     "keyCannotBeNumber": "标签名不能是数字。",
     "langNotInListConfirm": "这个语言无法识别。你想创建一个自定义语言吗？自定义语言可能不被一些浏览器支持。",
     "saveOnlyForRegisteredUser": "请登录以保存你的项目。",
-    "selectAtLeastOneLanguage": "请选择至少一种语言导出。"
+    "selectAtLeastOneLanguage": "请选择至少一种语言导出。",
+    "addLanguage": "新增语言",
+    "stringWithCategoryNameExists": "这个类别名已被定义为译文标签。",
+    "categoryWithKeyNameExists": "这个翻译标签已被定义为类别名。",
+    "languageAlreadyAdded": "这个语言已经存在。",
+    "lossUnsavedWarning": "如果你加载另一个项目，所有未保存的修改将会丢失。",
+    "invalidProjectFile": "这不是一个i18n項目"
   },
   "zh-CHT": {
     "newProject": "新增檔案",
@@ -152,7 +176,13 @@
     "keyCannotBeNumber": "標籤名不能是數字。",
     "langNotInListConfirm": "這個語言無法識別。你想創建一個自定語言嗎？自定語言可能不被一些瀏覽器支援。",
     "saveOnlyForRegisteredUser": "請登入以存儲你的檔案。",
-    "selectAtLeastOneLanguage": "請選擇至少一種語言轉存。"
+    "selectAtLeastOneLanguage": "請選擇至少一種語言轉存。",
+    "addLanguage": "新增語言",
+    "stringWithCategoryNameExists": "這個類別名已被定義為譯文標籤。",
+    "categoryWithKeyNameExists": "這個翻譯標籤已被定義為類別名。",
+    "languageAlreadyAdded": "這個語言已經存在。",
+    "lossUnsavedWarning": "如果你載入另一個檔案，所有未存儲的修改將會丟失。",
+    "invalidProjectFile": "這不是一個i18n檔案"
   },
   "GsI18n": true
 }

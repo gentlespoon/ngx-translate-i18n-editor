@@ -155,6 +155,7 @@ export class LanglistComponent implements OnInit {
 
   newLang = '';
   addLangPopup = false;
+  errorMsg = '';
 
   ngOnInit() {
   }
@@ -174,7 +175,7 @@ export class LanglistComponent implements OnInit {
         }
       }
       if (this.i18nService.langList.indexOf(this.newLang) !== -1) {
-        alert(this.translationService.instant('languageAlreadyAdded'));
+        this.errorMsg = 'languageAlreadyAdded';
         return;
       }
       this.i18nService.i18nData[this.newLang] = {};

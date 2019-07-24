@@ -62,17 +62,13 @@ export class I18nService {
   }
 
   loadProject(savedProject: string) {
-    try {
-      var parsedGsI18nData = JSON.parse(savedProject);
-      if (!parsedGsI18nData['GsI18n']) {
-        throw 'Not a valid Gs i18n project file';
-      }
-      delete parsedGsI18nData['GsI18n'];
-      this.i18nData = { ... parsedGsI18nData };
-      this.buildList();
-    } catch (ex) {
-      return alert(ex);
+    var parsedGsI18nData = JSON.parse(savedProject);
+    if (!parsedGsI18nData['GsI18n']) {
+      throw 'invalidProjectFile';
     }
+    delete parsedGsI18nData['GsI18n'];
+    this.i18nData = { ... parsedGsI18nData };
+    this.buildList();
   }
 
   buildList(): void {

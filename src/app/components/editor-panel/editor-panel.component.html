@@ -1,5 +1,13 @@
 <div class="editor-panel">
   <div class="title"><i class="fas fa-edit"></i> 3. {{ 'editor' | translate }}</div>
+
+  <div class="row">
+    <div class="language title">{{ 'translateKeys' | translate }}</div>
+    <div class="translation">
+      <input type="text" value="{{ i18nService.currentKey }}" (change)="updateCurrentKey(keyName.value)" #keyName>
+    </div>
+  </div>
+
   <div class="editor-main">
     <div class="row">
       <div class="language title">{{ 'languages' | translate }}</div>

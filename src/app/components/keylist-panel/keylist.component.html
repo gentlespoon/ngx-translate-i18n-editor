@@ -12,7 +12,8 @@
 <div class="popup-container"  *ngIf="addKeyPopup">
     <div class="popup addKey">
       <p>{{ 'whatKeyToAdd' | translate }}</p>
-      <input type="text" [(ngModel)]="newKey">
+      <div class="errorMsg">{{ errorMsg | translate}}</div>
+      <input type="text" [(ngModel)]="newKey" (change)="errorMsg = ''">
       <div class="buttonRow">
         <button class="btn" [disabled]="!newKey" (click)="addKey()">{{ 'addKey' | translate }}</button>
         <button class="btn" (click)="dismissPopup()">{{ 'cancel' | translate }}</button>

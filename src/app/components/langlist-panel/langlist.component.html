@@ -11,7 +11,8 @@
 <div class="popup-container"  *ngIf="addLangPopup">
   <div class="popup addLanguage">
     <p>{{ 'whatLanguageToAdd' | translate }}</p>
-    <input type="text" list="languages" [(ngModel)]="newLang">
+    <div class="errorMsg">{{ errorMsg | translate}}</div>
+    <input type="text" list="languages" [(ngModel)]="newLang" (change)="errorMsg = ''">
     <datalist id="languages">
       <option *ngFor="let lang of languageList">{{ lang }}</option>
     </datalist>

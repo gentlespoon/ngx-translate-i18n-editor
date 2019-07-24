@@ -19,6 +19,7 @@ export class KeylistComponent implements OnInit {
 
   newKey = '';
   addKeyPopup = false;
+  errorMsg = '';
 
   dismissPopup(): void {
     this.addKeyPopup = false;
@@ -26,7 +27,8 @@ export class KeylistComponent implements OnInit {
 
   addKey(): void {
     if (!this.i18nService.langList.length) {
-      return alert(this.translationService.instant('addLangFirst'));
+      this.errorMsg = 'addLangFirst';
+      return;
     }
     if (this.newKey) {
       // if newKey is not empty
@@ -34,20 +36,23 @@ export class KeylistComponent implements OnInit {
       if (splittedKeyName.length > 1) {
         // avoid category with no child
         if (splittedKeyName[splittedKeyName.length-1] === '') {
-          return alert(this.translationService.instant('cannotAddCategory'));
+          this.errorMsg = 'cannotAddCategory';
+          return;
         }
         // avoid category name and string name collision
         var cumulatedKeySegment = '';
         for (let keySegment of splittedKeyName) {
           cumulatedKeySegment += cumulatedKeySegment ? `.${keySegment}` : keySegment;
           if (this.i18nService.keyList.indexOf(cumulatedKeySegment) !== -1) {
-            return alert(this.translationService.instant('stringWithCategoryNameExists'));
+            this.errorMsg = 'stringWithCategoryNameExists';
+            return;
           }
         }
       }
       // avoid numeric key which will cause serialization problem
       if (!isNaN(Number(splittedKeyName[splittedKeyName.length-1]))) {
-        return alert(this.translationService.instant('keyCannotBeNumber'));
+        this.errorMsg = 'keyCannotBeNumber';
+        return;
       }
 
       var existingKeys = this.i18nService.keyList.filter(key => (key as string).startsWith(this.newKey))
@@ -55,11 +60,13 @@ export class KeylistComponent implements OnInit {
         // if there is existing key equals to or starts with newKey
         for (let key of existingKeys) {
           if (key === this.newKey) {
-            return alert(this.translationService.instant('keyAlreadyExists'));
+            this.errorMsg = 'keyAlreadyExists';
+            return;
           }
           // test to see if the existing key is a category;
           if (key.startsWith(this.newKey + '.')) {
-            return alert(this.translationService.instant('categoryWithKeyNameExists'));
+            this.errorMsg = 'categoryWithKeyNameExists';
+            return;
           }
         }        
       }

@@ -24,6 +24,7 @@ export class SessionPanelComponent implements OnInit {
   }
 
   
+  loadedFilename = '';
   
 
   public signIn(): void {
@@ -32,23 +33,25 @@ export class SessionPanelComponent implements OnInit {
   }
 
 
-  public newProject(): void {
+  public newProject(): boolean {
     if (
       Object.keys(this.i18nService.i18nData).length
       || this.i18nService.keyList.length
       || this.i18nService.langList.length
     ) {
       if (!confirm(this.translationService.instant('lossUnsavedWarning'))) {
-        return;
+        return false;
       }
     }
     this.i18nService.initialize();
-  
+    this.loadedFilename = '';
+    return true;
   }
 
+  
 
-
-  public openProject(): void {
+  public openProject(): boolean {
+    if (!this.newProject()) return false;
     var filePath = this.electronService.remote.dialog.showOpenDialog({
       title: this.translationService.instant('openProjectLong'),
       filters: [
@@ -58,11 +61,18 @@ export class SessionPanelComponent implements OnInit {
 
     // console.log(filePath, filePath.length, this.electronService.fs.existsSync(filePath[0]));
     if (!filePath || !filePath.length || !this.electronService.fs.existsSync(filePath[0])) {
-      return console.warn(`File does not exist`);
+      console.warn(`File does not exist`);
+      return false;
     }
 
     var fileContent = this.electronService.fs.readFileSync(filePath[0], 'utf8');
-    this.i18nService.loadProject(fileContent);
+    try {
+      this.i18nService.loadProject(fileContent);
+      this.loadedFilename = filePath[0];
+    } catch (ex) {
+      alert(this.translationService.instant(ex));
+    }
+    return true;
 
   }
 
@@ -74,7 +84,7 @@ export class SessionPanelComponent implements OnInit {
     
     var filePath = this.electronService.remote.dialog.showSaveDialog({
       title: this.translationService.instant('saveProjectLong'),
-      defaultPath: moment().format('YYYYMMDD-HHmmss') + '.json',
+      defaultPath: this.loadedFilename ? this.loadedFilename : moment().format('YYYYMMDD-HHmmss') + '.json',
     });
     if (!filePath.toLowerCase().endsWith('json')) {
       filePath += '.json';

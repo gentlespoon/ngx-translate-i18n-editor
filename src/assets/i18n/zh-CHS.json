@@ -27,5 +27,10 @@
   "keyCannotBeNumber": "标签名不能是数字。",
   "langNotInListConfirm": "这个语言无法识别。你想创建一个自定义语言吗？自定义语言可能不被一些浏览器支持。",
   "saveOnlyForRegisteredUser": "请登录以保存你的项目。",
-  "selectAtLeastOneLanguage": "请选择至少一种语言导出。"
+  "selectAtLeastOneLanguage": "请选择至少一种语言导出。",
+  "addLanguage": "新增语言",
+  "stringWithCategoryNameExists": "这个类别名已被定义为译文标签。",
+  "categoryWithKeyNameExists": "这个翻译标签已被定义为类别名。",
+  "languageAlreadyAdded": "这个语言已经存在。",
+  "lossUnsavedWarning": "如果你加载另一个项目，所有未保存的修改将会丢失。"
 }

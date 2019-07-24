@@ -27,5 +27,10 @@
   "keyCannotBeNumber": "The name of a key cannot be a number.",
   "langNotInListConfirm": "This language is not recognized. Do you want to create a custom language? Custom language may not be supported by some browsers.",
   "saveOnlyForRegisteredUser": "Please sign in to save your project.",
-  "selectAtLeastOneLanguage": "Select at least one language for export."
+  "selectAtLeastOneLanguage": "Select at least one language for export.",
+  "addLanguage": "Add Language",
+  "stringWithCategoryNameExists": "This category name has been defined as a translate key.",
+  "categoryWithKeyNameExists": "This translate key has been defined as a category name.",
+  "languageAlreadyAdded": "This language is already in the list.",
+  "lossUnsavedWarning": "If you load another project, all unsaved changes will be lost."
 }
