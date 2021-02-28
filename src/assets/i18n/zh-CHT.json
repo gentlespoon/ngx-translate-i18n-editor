@@ -33,5 +33,6 @@
   "categoryWithKeyNameExists": "這個翻譯標籤已被定義為類別名。",
   "languageAlreadyAdded": "這個語言已經存在。",
   "lossUnsavedWarning": "如果你載入另一個檔案，所有未存儲的修改將會丟失。",
-  "invalidProjectFile": "這個i18n檔案不正確"
+  "invalidProjectFile": "這個i18n檔案不正確",
+  "about": "關於"
 }

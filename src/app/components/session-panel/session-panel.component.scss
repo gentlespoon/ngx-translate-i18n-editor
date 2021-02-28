@@ -2,14 +2,12 @@
   float: right;
 }
 
-
 .panel.session {
   height: 30px;
+  line-height: 30px;
   border-bottom: 1px solid lightgray;
+  display: flex;
 }
-
-
-
 
 .btn.export {
   color: darkgreen;

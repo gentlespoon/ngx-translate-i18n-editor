@@ -1,23 +1,34 @@
 <div class="panel keylist">
-  <div class="title"><i class="fas fa-th-list"></i> 2. {{ 'translateKeys' | translate }}</div>
-  <button class="btn add" (click)="addKeyPopup=true"><i class="fas fa-plus-circle"></i> {{ 'add' | translate }}</button>
-  <button class="btn remove" (click)="removeKey()"><i class="fas fa-minus-circle"></i> {{ 'remove' | translate }}</button>
-  <select size="{{ i18nService.keyList.length+1 }}" *ngIf="i18nService.keyList.length" [(ngModel)]="i18nService.currentKey">
+  <div class="title">
+    <fa-icon [icon]="fasList"></fa-icon> 2. {{ "translateKeys" | translate }}
+  </div>
+  <button class="btn add" (click)="addKeyPopup = true">
+    <fa-icon [icon]="fasPlusCircle"></fa-icon> {{ "add" | translate }}
+  </button>
+  <button class="btn remove" (click)="removeKey()">
+    <fa-icon [icon]="fasMinusCircle"></fa-icon> {{ "remove" | translate }}
+  </button>
+  <select
+    size="{{ i18nService.keyList.length + 1 }}"
+    *ngIf="i18nService.keyList.length"
+    [(ngModel)]="i18nService.currentKey"
+  >
     <option *ngFor="let key of i18nService.keyList">{{ key }}</option>
   </select>
 </div>
 
-
-
-<div class="popup-container"  *ngIf="addKeyPopup">
-    <div class="popup addKey">
-      <p>{{ 'whatKeyToAdd' | translate }}</p>
-      <div class="errorMsg">{{ errorMsg | translate}}</div>
-      <input type="text" [(ngModel)]="newKey" (change)="errorMsg = ''">
-      <div class="buttonRow">
-        <button class="btn" [disabled]="!newKey" (click)="addKey()">{{ 'addKey' | translate }}</button>
-        <button class="btn" (click)="dismissPopup()">{{ 'cancel' | translate }}</button>
-      </div>
+<div class="popup-container" *ngIf="addKeyPopup">
+  <div class="popup addKey">
+    <p>{{ "whatKeyToAdd" | translate }}</p>
+    <div class="errorMsg">{{ errorMsg | translate }}</div>
+    <input type="text" [(ngModel)]="newKey" (change)="errorMsg = ''" />
+    <div class="buttonRow">
+      <button class="btn" [disabled]="!newKey" (click)="addKey()">
+        {{ "addKey" | translate }}
+      </button>
+      <button class="btn" (click)="dismissPopup()">
+        {{ "cancel" | translate }}
+      </button>
     </div>
   </div>
-  
+</div>

@@ -1,20 +1,28 @@
 <div class="panel session">
-  <div class="btn"><strong>Gs-Ngx-Translate-i18n-Editor</strong></div>
+  <div class="btn"><strong>Ngx-Translate i18n Editor</strong></div>
   |
   <button class="btn newProject" (click)="newProject()">
-    <i class="fas fa-folder-plus"></i> {{ "newProject" | translate }}
+    <fa-icon [icon]="fasFolderPlus"></fa-icon>
+    {{ "newProject" | translate }}
   </button>
   <button class="btn openProject" (click)="openProject()">
-    <i class="fas fa-folder-open"></i> {{ "openProject" | translate }}
+    <fa-icon [icon]="fasFolderOpen"></fa-icon>
+    {{ "openProject" | translate }}
   </button>
   <button class="btn saveProject" (click)="saveProject()">
-    <i class="fas fa-save"></i> {{ "saveProject" | translate }}
+    <fa-icon [icon]="fasSave"></fa-icon> {{ "saveProject" | translate }}
   </button>
   |
   <button class="btn import" (click)="import()">
-    <i class="fas fa-file-import"></i> {{ "import" | translate }}
+    <fa-icon [icon]="fasFileImport"></fa-icon> {{ "import" | translate }}
   </button>
   <button class="btn export" (click)="export()">
-    <i class="fas fa-file-export"></i> {{ "export" | translate }}
+    <fa-icon [icon]="fasFileExport"></fa-icon> {{ "export" | translate }}
+  </button>
+
+  <div class="spacer"></div>
+
+  <button class="btn about" (click)="about()">
+    <fa-icon [icon]="faInfoCircle"></fa-icon> {{ "about" | translate }}
   </button>
 </div>

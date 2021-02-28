@@ -4,6 +4,14 @@ import * as moment from "moment";
 import { I18nService } from "../../services/i18n.service";
 import { TranslationService } from "../../services/translation.service";
 import * as dotObject from "dot-object";
+import {
+  faFolderPlus as fasFolderPlus,
+  faFolderOpen as fasFolderOpen,
+  faSave as fasSave,
+  faFileImport as fasFileImport,
+  faFileExport as fasFileExport,
+  faInfoCircle as fasInfoCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "app-session-panel",
@@ -11,6 +19,13 @@ import * as dotObject from "dot-object";
   styleUrls: ["./session-panel.component.scss"],
 })
 export class SessionPanelComponent implements OnInit {
+  public fasFolderPlus = fasFolderPlus;
+  public fasFolderOpen = fasFolderOpen;
+  public fasSave = fasSave;
+  public fasFileImport = fasFileImport;
+  public fasFileExport = fasFileExport;
+  public faInfoCircle = fasInfoCircle;
+
   constructor(
     private electronService: ElectronService,
     private i18nService: I18nService,
@@ -38,7 +53,7 @@ export class SessionPanelComponent implements OnInit {
 
   public openProject(): boolean {
     if (!this.newProject()) return false;
-    var filePath = this.electronService.remote.dialog.showOpenDialog({
+    var filePath = this.electronService.remote.dialog.showOpenDialogSync({
       title: this.translationService.instant("openProjectLong"),
       filters: [{ name: "Gs i18n Project File", extensions: ["json"] }],
     });
@@ -64,7 +79,7 @@ export class SessionPanelComponent implements OnInit {
   }
 
   public saveProject(): void {
-    var filePath = this.electronService.remote.dialog.showSaveDialog({
+    var filePath = this.electronService.remote.dialog.showSaveDialogSync({
       title: this.translationService.instant("saveProjectLong"),
       defaultPath: this.loadedFilename
         ? this.loadedFilename
@@ -90,7 +105,7 @@ export class SessionPanelComponent implements OnInit {
 
   public export(): void {
     if (this.i18nService.selectedLang.length) {
-      var dirPath = this.electronService.remote.dialog.showOpenDialog({
+      var dirPath = this.electronService.remote.dialog.showOpenDialogSync({
         title: this.translationService.instant("exportToDir"),
         buttonLabel: this.translationService.instant("export"),
         properties: ["openDirectory"],
@@ -123,5 +138,9 @@ export class SessionPanelComponent implements OnInit {
     } else {
       return alert(this.translationService.instant("selectAtLeastOneLanguage"));
     }
+  }
+
+  public about() {
+    this.electronService.remote.shell.openExternal("https://angdasoft.com/");
   }
 }
