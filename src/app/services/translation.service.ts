@@ -8,7 +8,6 @@ export class TranslationService {
   private DEV = false;
 
   public readonly languages = {
-    "en-TT": "English (WTF?!)",
     "en-US": "English (United States)",
     "en-GB": "English (United Kingdom)",
     "zh-CHS": "中文 (简体)",
@@ -17,7 +16,7 @@ export class TranslationService {
 
   constructor(public translateService: TranslateService) {
     this.translateService.addLangs(["en-US", "en-GB", "zh-CHS", "zh-CHT"]);
-    this.translateService.setDefaultLang("en-TT");
+    this.translateService.setDefaultLang("en-US");
     this.getUserLanguage();
   }
 
@@ -52,7 +51,7 @@ export class TranslationService {
     localStorage.setItem("language", this._language);
   }
 
-  private _language: string = "en-TT";
+  private _language: string = "en-US";
 
   public get language(): string {
     return this._language;

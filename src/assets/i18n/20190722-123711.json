@@ -145,7 +145,7 @@
     "categoryWithKeyNameExists": "这个翻译标签已被定义为类别名。",
     "languageAlreadyAdded": "这个语言已经存在。",
     "lossUnsavedWarning": "如果你加载另一个项目，所有未保存的修改将会丢失。",
-    "invalidProjectFile": "这不是一个i18n項目"
+    "invalidProjectFile": "这个i18n文件不正确"
   },
   "zh-CHT": {
     "newProject": "新增檔案",
@@ -182,7 +182,7 @@
     "categoryWithKeyNameExists": "這個翻譯標籤已被定義為類別名。",
     "languageAlreadyAdded": "這個語言已經存在。",
     "lossUnsavedWarning": "如果你載入另一個檔案，所有未存儲的修改將會丟失。",
-    "invalidProjectFile": "這不是一個i18n檔案"
+    "invalidProjectFile": "這個i18n檔案不正確"
   },
   "GsI18n": true
 }

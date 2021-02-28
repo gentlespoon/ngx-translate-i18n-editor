@@ -32,5 +32,6 @@
   "stringWithCategoryNameExists": "This category name has been defined as a translate key.",
   "categoryWithKeyNameExists": "This translate key has been defined as a category name.",
   "languageAlreadyAdded": "This language is already in the list.",
-  "lossUnsavedWarning": "If you load another project, all unsaved changes will be lost."
+  "lossUnsavedWarning": "If you load another project, all unsaved changes will be lost.",
+  "invalidProjectFile": "Invalid i18n project file."
 }
