@@ -1,17 +1,20 @@
 <div class="panel session">
   <div class="btn"><strong>Gs-Ngx-Translate-i18n-Editor</strong></div>
   |
-  <button class="btn newProject" (click)="newProject()"><i class="fas fa-folder-plus"></i> {{ 'newProject' | translate }}</button>
-  <button class="btn openProject" (click)="openProject()"><i class="fas fa-folder-open"></i> {{ 'openProject' | translate }}</button>
-  <button class="btn saveProject" (click)="saveProject()" [class.disabled]="!sessionService.token"><i class="fas fa-save"></i> {{ 'saveProject' | translate }}</button>
+  <button class="btn newProject" (click)="newProject()">
+    <i class="fas fa-folder-plus"></i> {{ "newProject" | translate }}
+  </button>
+  <button class="btn openProject" (click)="openProject()">
+    <i class="fas fa-folder-open"></i> {{ "openProject" | translate }}
+  </button>
+  <button class="btn saveProject" (click)="saveProject()">
+    <i class="fas fa-save"></i> {{ "saveProject" | translate }}
+  </button>
   |
-  <button class="btn import" (click)="import()" [class.disabled]="!sessionService.token"><i class="fas fa-file-import"></i> {{ 'import' | translate }}</button>
-  <button class="btn export" (click)="export()"><i class="fas fa-file-export"></i> {{ 'export' | translate }}</button>
-  
-  <!-- session buttons -->
-  <button class="btn session signIn" *ngIf="!sessionService.token" (click)="signIn()"><i class="far fa-user-circle"></i> {{ 'signIn' | translate }}</button>
-
-  <button class="btn session signOut" *ngIf="sessionService.token" (click)="sessionService.signOut()"><i class="far fa-times-circle"></i> {{ 'signOut' | translate }}</button>
-  <button class="btn session profile" *ngIf="sessionService.token" (click)="sessionService.userProfile()"><i class="fas fa-user-circle"></i> {{ sessionService.username ? sessionService.username : sessionService.email }}</button>
-
+  <button class="btn import" (click)="import()">
+    <i class="fas fa-file-import"></i> {{ "import" | translate }}
+  </button>
+  <button class="btn export" (click)="export()">
+    <i class="fas fa-file-export"></i> {{ "export" | translate }}
+  </button>
 </div>
