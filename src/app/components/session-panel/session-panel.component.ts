@@ -55,7 +55,7 @@ export class SessionPanelComponent implements OnInit {
     if (!this.newProject()) return false;
     var filePath = this.electronService.remote.dialog.showOpenDialogSync({
       title: this.translationService.instant("openProjectLong"),
-      filters: [{ name: "Gs i18n Project File", extensions: ["json"] }],
+      filters: [{ name: "i18n Project File", extensions: ["json"] }],
     });
 
     // console.log(filePath, filePath.length, this.electronService.fs.existsSync(filePath[0]));
@@ -90,7 +90,7 @@ export class SessionPanelComponent implements OnInit {
     }
 
     var saveObject = { ...this.i18nService.i18nData };
-    saveObject["GsI18n"] = true;
+    saveObject["ngxTranslateI18nEditorProjectFile"] = true;
     var saveJSON = JSON.stringify(saveObject, null, 2);
 
     this.electronService.fs.writeFile(filePath, saveJSON, (err) => {

@@ -56,12 +56,16 @@ export class I18nService {
   }
 
   loadProject(savedProject: string) {
-    var parsedGsI18nData = JSON.parse(savedProject);
-    if (!parsedGsI18nData["GsI18n"]) {
+    var parsedProjectData = JSON.parse(savedProject);
+    if (
+      !parsedProjectData["ngxTranslateI18nEditorProjectFile"] &&
+      !parsedProjectData["GsI18n"]
+    ) {
       throw "invalidProjectFile";
     }
-    delete parsedGsI18nData["GsI18n"];
-    this.i18nData = { ...parsedGsI18nData };
+    delete parsedProjectData["GsI18n"];
+    delete parsedProjectData["ngxTranslateI18nEditorProjectFile"];
+    this.i18nData = { ...parsedProjectData };
     this.buildList();
   }
 
